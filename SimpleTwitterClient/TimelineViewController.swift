@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class TimelineViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
