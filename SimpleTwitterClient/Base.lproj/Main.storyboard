@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--タイムライン-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SimpleTwitterClient" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                             <constraint firstItem="buW-YZ-APr" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="tMl-bW-n1N"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Y2P-zo-RHx">
+                    <navigationItem key="navigationItem" title="タイムライン" id="Y2P-zo-RHx">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="iOK-dI-Yyc"/>
                     </navigationItem>
                 </viewController>
