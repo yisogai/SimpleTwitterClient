@@ -119,6 +119,23 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     // MARK: - Delegate
+    // MARK: UITableView
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.tweets.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("tweetCellId", forIndexPath: indexPath) as! TimelineViewTweetCell
+        
+        // TODO: configure cell
+        
+        return cell
+    }
     
     // MARK: - Handler
     
