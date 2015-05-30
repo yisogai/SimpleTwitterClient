@@ -24,6 +24,8 @@ class TimelineViewController: UIViewController {
     }
     
     @IBAction func onPressTweetButton(sender: UIBarButtonItem) {
+        let tweetVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+        self.presentViewController(tweetVC, animated: true, completion: nil)
     }
     
     /*
