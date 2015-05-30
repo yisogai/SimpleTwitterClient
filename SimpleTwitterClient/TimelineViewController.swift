@@ -13,6 +13,8 @@ class TimelineViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     weak var refreshControl: UIRefreshControl!
 
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,8 +26,15 @@ class TimelineViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Public
+    
+    // MARK: - Private
+    
+    // MARK: - Delegate
+    
+    // MARK: - Handler
     
     @IBAction func onPressTweetButton(sender: UIBarButtonItem) {
         let tweetVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
@@ -35,15 +44,4 @@ class TimelineViewController: UIViewController {
     func onChangeRefreshControlValue(sender: UIRefreshControl) {
         NSLog("refresh!")
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
