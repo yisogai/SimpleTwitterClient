@@ -8,6 +8,7 @@
 
 import UIKit
 import Social
+import Accounts
 
 class TimelineViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!

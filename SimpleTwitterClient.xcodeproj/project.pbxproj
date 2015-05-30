@@ -14,6 +14,7 @@
 		0174B7BC1B19CBE600F9A938 /* SimpleTwitterClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174B7BB1B19CBE600F9A938 /* SimpleTwitterClientTests.swift */; };
 		0174B7C61B19CD8500F9A938 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174B7C51B19CD8500F9A938 /* TimelineViewController.swift */; };
 		0174B7CC1B19CE5700F9A938 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0174B7CB1B19CE5700F9A938 /* Social.framework */; };
+		0174B7CE1B19D36D00F9A938 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0174B7CD1B19D36D00F9A938 /* Accounts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		0174B7BB1B19CBE600F9A938 /* SimpleTwitterClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTwitterClientTests.swift; sourceTree = "<group>"; };
 		0174B7C51B19CD8500F9A938 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		0174B7CB1B19CE5700F9A938 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		0174B7CD1B19D36D00F9A938 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0174B7CE1B19D36D00F9A938 /* Accounts.framework in Frameworks */,
 				0174B7CC1B19CE5700F9A938 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +65,7 @@
 		0174B7971B19CBE600F9A938 = {
 			isa = PBXGroup;
 			children = (
+				0174B7CD1B19D36D00F9A938 /* Accounts.framework */,
 				0174B7CB1B19CE5700F9A938 /* Social.framework */,
 				0174B7A21B19CBE600F9A938 /* SimpleTwitterClient */,
 				0174B7B81B19CBE600F9A938 /* SimpleTwitterClientTests */,
