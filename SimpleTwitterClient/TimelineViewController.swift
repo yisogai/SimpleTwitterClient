@@ -10,7 +10,7 @@ import UIKit
 import Social
 import Accounts
 
-class TimelineViewController: UIViewController {
+class TimelineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     weak var refreshControl: UIRefreshControl!
     var tweets = NSArray()
@@ -19,6 +19,9 @@ class TimelineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.delegate = self;
+        self.tableView.dataSource = self;
         
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: "onChangeRefreshControlValue:", forControlEvents: .ValueChanged)
