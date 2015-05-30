@@ -104,8 +104,6 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
                     return
                 }
                 
-                NSLog(results!.description)
-                
                 self.tweets = results!
                 
                 dispatch_async(dispatch_get_main_queue(), { () in
@@ -134,7 +132,8 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("tweetCellId", forIndexPath: indexPath) as! TimelineViewTweetCell
         
-        // TODO: configure cell
+        let tweet = self.tweets[indexPath.row] as? NSDictionary
+        cell.updateCell(tweet: tweet)
         
         return cell
     }
