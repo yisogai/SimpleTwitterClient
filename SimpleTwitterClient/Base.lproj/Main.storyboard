@@ -30,7 +30,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="タイムライン" id="Y2P-zo-RHx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="iOK-dI-Yyc"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="iOK-dI-Yyc">
+                            <connections>
+                                <action selector="onPressTweetButton:" destination="vXZ-lx-hvc" id="WXc-vE-AVX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="buW-YZ-APr" id="gzE-Ic-5Zv"/>

@@ -22,7 +22,9 @@ class TimelineViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func onPressTweetButton(sender: UIBarButtonItem) {
+    }
+    
     /*
     // MARK: - Navigation
 
