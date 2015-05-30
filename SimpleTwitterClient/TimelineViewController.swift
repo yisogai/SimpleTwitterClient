@@ -83,8 +83,18 @@ class TimelineViewController: UIViewController {
                 }
                 
                 if results == nil {
-                    // TODO: API アクセス数上限到達時のエラーハンドリング
-                    NSLog("レスポンス無し？")
+                    let errorResponse = NSJSONSerialization.JSONObjectWithData(response, options: .AllowFragments, error: &parseError) as? NSDictionary
+                    if errorResponse == nil {
+                        NSLog("レスポンス無し？")
+                    } else {
+                        let errors = errorResponse!["errors"] as? NSArray
+                        if errors?.count > 0 {
+                            NSLog("エラー: \(errors!.description)")
+                        } else {
+                            NSLog("不明なレスポンス")
+                        }
+                    }
+                    
                     self.refreshControl.endRefreshing()
                     return
                 }
