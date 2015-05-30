@@ -11,11 +11,15 @@ import Social
 
 class TimelineViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    weak var refreshControl: UIRefreshControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "onChangeRefreshControlValue:", forControlEvents: .ValueChanged)
+        self.tableView.addSubview(refreshControl)
+        self.refreshControl = refreshControl;
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,6 +30,10 @@ class TimelineViewController: UIViewController {
     @IBAction func onPressTweetButton(sender: UIBarButtonItem) {
         let tweetVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
         self.presentViewController(tweetVC, animated: true, completion: nil)
+    }
+
+    func onChangeRefreshControlValue(sender: UIRefreshControl) {
+        NSLog("refresh!")
     }
     
     /*
