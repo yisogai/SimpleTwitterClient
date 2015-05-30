@@ -22,6 +22,8 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 44
         
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: "onChangeRefreshControlValue:", forControlEvents: .ValueChanged)
