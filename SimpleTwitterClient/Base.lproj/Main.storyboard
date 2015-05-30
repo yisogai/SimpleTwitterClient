@@ -15,7 +15,19 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="buW-YZ-APr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="buW-YZ-APr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="AKq-ux-ixy"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="buW-YZ-APr" secondAttribute="bottom" id="RNn-Ip-iaj"/>
+                            <constraint firstAttribute="trailing" secondItem="buW-YZ-APr" secondAttribute="trailing" id="nxa-ms-69H"/>
+                            <constraint firstItem="buW-YZ-APr" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="tMl-bW-n1N"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Y2P-zo-RHx"/>
                 </viewController>
