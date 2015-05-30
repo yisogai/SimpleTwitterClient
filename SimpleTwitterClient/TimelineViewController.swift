@@ -23,6 +23,11 @@ class TimelineViewController: UIViewController {
         self.tableView.addSubview(refreshControl)
         self.refreshControl = refreshControl;
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.updateTimeline()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -31,6 +36,10 @@ class TimelineViewController: UIViewController {
     // MARK: - Public
     
     // MARK: - Private
+    
+    func updateTimeline() {
+        NSLog("update!");
+    }
     
     // MARK: - Delegate
     
@@ -42,6 +51,6 @@ class TimelineViewController: UIViewController {
     }
 
     func onChangeRefreshControlValue(sender: UIRefreshControl) {
-        NSLog("refresh!")
+        self.updateTimeline()
     }
 }
