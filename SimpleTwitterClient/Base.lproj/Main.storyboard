@@ -32,6 +32,9 @@
                     <navigationItem key="navigationItem" title="タイムライン" id="Y2P-zo-RHx">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="iOK-dI-Yyc"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="buW-YZ-APr" id="gzE-Ic-5Zv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
